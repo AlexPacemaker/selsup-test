@@ -25,6 +25,7 @@ const model = {
       value: "макси",
     },
   ],
+  colors: ["red", "green", "blue"],
 };
 
 const App = (): JSX.Element => {

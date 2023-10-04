@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 
 interface Param {
   id: number;
   name: string;
-  type: "string";
+  type: string;
 }
 
 interface ParamValue {
@@ -11,13 +11,9 @@ interface ParamValue {
   value: string;
 }
 
-interface Color {
-  // Define the properties of the Color interface here
-}
-
 interface Model {
   paramValues: ParamValue[];
-  colors: Color[];
+  colors: string[];
 }
 
 interface Props {
@@ -25,8 +21,8 @@ interface Props {
   model: Model;
 }
 
-const ParamEditor: React.FC<Props> = ({ params, model }) => {
-  const [values, setValues] = useState(model.paramValues);
+const ParamEditor = ({ params, model }: Props): JSX.Element => {
+  const [values, setValues] = React.useState(model.paramValues);
 
   const handleChange = (paramId: number, value: string) => {
     setValues((prevValues) =>
