@@ -1,27 +1,16 @@
-// import React from "react";
-// import "./App.css";
-
-// const App = (): JSX.Element => {
-//   return <></>;
-// };
-
-// export default App;
-
-
-
-import React from 'react';
-import ParamEditor from './ParamEditor';
+import React from "react";
+import ParamEditor from "./Components/ParamEditor/ParamEditor";
 
 const params = [
   {
     id: 1,
-    name: 'Назначение',
-    type: 'string',
+    name: "Назначение",
+    type: "string",
   },
   {
     id: 2,
-    name: 'Длина',
-    type: 'string',
+    name: "Длина",
+    type: "string",
   },
 ];
 
@@ -29,16 +18,16 @@ const model = {
   paramValues: [
     {
       paramId: 1,
-      value: 'повседневное',
+      value: "повседневное",
     },
     {
       paramId: 2,
-      value: 'макси',
+      value: "макси",
     },
   ],
 };
 
-const App: React.FC = () => {
+const App = (): JSX.Element => {
   return (
     <div>
       <ParamEditor params={params} model={model} />
@@ -47,4 +36,3 @@ const App: React.FC = () => {
 };
 
 export default App;
-
