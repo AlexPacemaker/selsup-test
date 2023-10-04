@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./ParamEditor.module.scss";
 import { Model, Props } from "./ParamElditor.props";
 
 const ParamEditor = ({ params, model }: Props): JSX.Element => {
@@ -18,7 +19,7 @@ const ParamEditor = ({ params, model }: Props): JSX.Element => {
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       {params.map((param) => (
         <div key={param.id}>
           <label htmlFor={`param-${param.id}`}>{param.name}</label>
@@ -30,7 +31,7 @@ const ParamEditor = ({ params, model }: Props): JSX.Element => {
           />
         </div>
       ))}
-      <button onClick={() => console.log(getModel())}>Get Model</button>
+      <button onClick={() => console.log(getModel())}>Искать модель</button>
     </div>
   );
 };
