@@ -1,25 +1,5 @@
 import React from "react";
-
-interface Param {
-  id: number;
-  name: string;
-  type: string;
-}
-
-interface ParamValue {
-  paramId: number;
-  value: string;
-}
-
-interface Model {
-  paramValues: ParamValue[];
-  colors: string[];
-}
-
-interface Props {
-  params: Param[];
-  model: Model;
-}
+import { Model, Props } from "./ParamElditor.props";
 
 const ParamEditor = ({ params, model }: Props): JSX.Element => {
   const [values, setValues] = React.useState(model.paramValues);
